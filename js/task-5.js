@@ -1,59 +1,34 @@
 "use strict";
 
-const countryChina = 'Китай';
-const priceChina = 100;
-
-const countryChile = 'Чили';
-const priceChile = 250;
-
-const countryAustralia = 'Австралия';
-const priceAustralia = 170;
-
-const countryIndia = 'Индия';
-const priceIndia = 80;
-
-const countryJamaica = 'Ямайка';
-const priceJamaica = 120;
-
 let userInput = prompt('Укажите в какую страну необходимо доставить товар и мы расчитаем точную сумму доставки');
-let result;
 
-if (userInput === null) {    
-    console.log ('Отменено пользователем!');
-    alert ('Отменено пользователем!');    
-} else if (userInput === '') {    
-    console.log ('Повторите ввод');
-    alert ('Повторите ввод');
+if(userInput === null) {    
+    alert('Отменено пользователем!');    
+} else if(userInput === '') {
+    alert('Повторите ввод');
 } 
 
-switch (userInput.toLocaleLowerCase()) {
-    case 'китай': 
-        console.log (`Доставка в ${countryChina} будет стоить ${priceChina} кредитов`);
-        alert (`Доставка в ${countryChina} будет стоить ${priceChina} кредитов`);
+switch(userInput.toLowerCase()) {
+    case 'китай':
+        alert('Доставка в Китай будет стоить 100 кредитов');
         break;
 
-    case 'чили': 
-        console.log (`Доставка в ${countryChile} будет стоить ${priceChile} кредитов`);
-        alert (`Доставка в ${countryChile} будет стоить ${priceChile} кредитов`);
+    case 'чили':
+        alert('Доставка в Чили будет стоить 250 кредитов');
         break;
 
-    case 'австралия': 
-        console.log (`Доставка в ${countryAustralia} будет стоить ${priceAustralia} кредитов`);
-        alert (`Доставка в ${countryAustralia} будет стоить ${priceAustralia} кредитов`);
+    case 'австралия':
+        alert('Доставка в Австралия будет стоить 170 кредитов');
         break;
 
-    case 'индия': 
-        console.log (`Доставка в ${countryIndia} будет стоить ${priceIndia} кредитов`);
-        alert (`Доставка в ${countryIndia} будет стоить ${priceIndia} кредитов`);
+    case 'индия':
+        alert('Доставка в Индия будет стоить 80 кредитов');
         break;
 
-    case 'ямайка': 
-        console.log (`Доставка в ${countryJamaica} будет стоить ${priceJamaica} кредитов`);
-        alert (`Доставка в ${countryJamaica} будет стоить ${priceJamaica} кредитов`);
+    case 'ямайка':
+        alert('Доставка в Ямайка будет стоить 120 кредитов');
         break;
 
     default:
-        result = 'В вашей стране доставка не доступна';
-        console.log ('В вашей стране доставка не доступна');
-        alert ('В вашей стране доставка не доступна');
+        alert('В вашей стране доставка не доступна');
 }
